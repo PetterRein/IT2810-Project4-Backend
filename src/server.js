@@ -51,6 +51,6 @@ function loadMovies() {
 //loadMovies()
 
 // sier hvilken port vi vil svare på
-const port = process.env.PORT || 5050;
+const port = process.env.PORT || 5051;
 app.listen(port, () => console.log(`server running on port ${port}`));
 module.exports = app
