@@ -36,9 +36,9 @@ deploy:
     - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - ssh pettegre@it2810-40.idi.ntnu.no 'sudo systemctl stop express.service; sudo rm -rf /var/www/server/prosjekt3'
-    - rsync -rav --delete build/* pettegre@it2810-40.idi.ntnu.no:/var/www/server/prosjekt3/
-    - rsync -rav /builds/IT2810-H19/teams/team-40/project-3-backend/node_modules pettegre@it2810-40.idi.ntnu.no:/var/www/server/prosjekt3/
-    - rsync -rav /builds/IT2810-H19/teams/team-40/project-3-backend/package.json pettegre@it2810-40.idi.ntnu.no:/var/www/server/prosjekt3/
-    - rsync -rav /builds/IT2810-H19/teams/team-40/project-3-backend/package-lock.json pettegre@it2810-40.idi.ntnu.no:/var/www/server/prosjekt3/
-    - ssh pettegre@it2810-40.idi.ntnu.no 'cd /var/www/server/prosjekt3; npm install; sudo chmod +x server.js; sudo systemctl start express.service'
+    - ssh pettegre@it2810-40.idi.ntnu.no 'sudo systemctl stop express4.service; sudo rm -rf /var/www/server/prosjekt4'
+    - rsync -rav --delete build/* pettegre@it2810-40.idi.ntnu.no:/var/www/server/prosjekt4/
+    - rsync -rav /builds/IT2810-H19/teams/team-40/project-4-backend-new/node_modules pettegre@it2810-40.idi.ntnu.no:/var/www/server/prosjekt4/
+    - rsync -rav /builds/IT2810-H19/teams/team-40/project-4-backend-new/package.json pettegre@it2810-40.idi.ntnu.no:/var/www/server/prosjekt4/
+    - rsync -rav /builds/IT2810-H19/teams/team-40/project-4-backend-new/package-lock.json pettegre@it2810-40.idi.ntnu.no:/var/www/server/prosjekt4/
+    - ssh pettegre@it2810-40.idi.ntnu.no 'cd /var/www/server/prosjekt4; npm install; sudo chmod +x server.js; sudo systemctl start express4.service'
