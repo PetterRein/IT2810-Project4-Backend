@@ -8,6 +8,7 @@ import Movie from './models/Movie'
 const fs = require('fs');
 const app = express();
 app.use(cors());
+app.use(express.static(__dirname + '/public'))
 
 // Lager en endepunkt som svarer på / som gir deg Hello World tilbake, fint å teste med
 app.get('/', (req, res) => {
