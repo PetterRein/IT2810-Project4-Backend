@@ -24,7 +24,7 @@
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.3",
     "@babel/runtime": "^7.7.2",
-    "mocha": "^6.2.1",
+    "mocha": "^10.2.0",
     "nodemon": "^1.19.3",
     "supertest": "^4.0.2"
   }
